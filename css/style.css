@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+:root{
+    --radius: 1.1rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Arvo', serif;
+    background-color: #ccc;
+}
+.container{
+    margin: 1.5rem auto;
+    background-color: rgb(148, 174, 231);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 700px;
+}
+header{
+    text-align: center;
+    margin: 1rem;
+}
+.fa-clipboard-list{
+    color: rgb(228, 228, 12);
+}
+.alert {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: var(--radius);
+    padding: .5rem 0;
+    text-transform: capitalize;
+}
+.alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+}
+.alert-success {
+    color: #155724;
+    background: #d4edda;
+}
+.new-note{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem 1rem;
+    gap: 1rem;
+}
+.note{
+    font-family: inherit;
+    font-size: 1.1rem;
+    border: none;
+}
+.note-value{
+    font-family: inherit;
+    font-size: 1.1rem;
+    border: none;
+}
+.add {
+    width: 20%;
+}
+.comment{
+    display: flex;
+    gap: 1rem;
+    width: 70%;
+}
+.comment-name{
+    width: 60%;
+    background-color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius);
+    font-family: inherit;
+}
+.comment-name::first-letter{
+    text-transform: capitalize;
+}
+.money {
+    font-family: inherit;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    font-weight: 700;
+    color: green;
+    width: 30%;
+    text-align: center;
+}
+.comment-btns{
+    border-radius: var(--radius);
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    border: none;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.delete {
+    color: red;
+    font-size: 1.15rem;
+    background-color: white;
+}
+.edit{
+    color: navy;
+    font-size: 1.15rem;
+    background-color: white;
+}
+.btn:hover{
+    opacity: 0.5;
+}
+.total{
+    display: flex;
+    gap: 1rem;
+    width: 70%;
+}
+.total-name{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 3px;
+    width: 60%;
+    background-color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius);
+    font-family: inherit;
+}
+.total-money {
+    font-family: inherit;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    font-weight: 700;
+    color: rgb(202, 65, 65);
+    width: 30%;
+    text-align: center;
+}
+.total-container{
+    visibility: hidden;
+}
+.show-total {
+    visibility: visible;
+}

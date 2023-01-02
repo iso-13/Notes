@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-clipboard-list"></i> Notes</h1>
+        </header>
+        <p class="alert"></p>
+        <section class="new-note">
+            <div class="comment">
+                <input type="text"class="note comment-name" placeholder="Write your note...">
+                <input type="number" class="note-value money" placeholder="Cost">
+            </div>
+            <button class="add btn">Add Note</button>
+        </section>
+    </div>
+    <div class="container notes-container"></div>
+    <div class="container total-container">
+        <section class="new-note">
+            <div class="total">
+                <p class="total-name">Total cost</p>
+                <p class="total-money">${costValue}</p>
+            </div>
+        </section>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
