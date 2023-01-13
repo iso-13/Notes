@@ -20,6 +20,11 @@ body{
     justify-content: center;
     max-width: 700px;
 }
+@media (max-width: 740px){
+    .container{
+        margin: 1.5rem 1rem;
+    }
+}
 header{
     text-align: center;
     margin: 1rem;
@@ -61,6 +66,30 @@ header{
 }
 .add {
     width: 20%;
+}
+/* form style */
+
+.search-container{
+    width: 50%;
+    margin: 0.75rem auto;
+    padding: 0.1rem 0.75rem;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: var(--radius);
+}
+.search{
+    width: 100%;
+    background-color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius);
+    font-family: inherit;
+    border: none;
+    font-size: 1.1rem;
+}
+/* search icon style */
+.fa-magnifying-glass{
+    font-size: 1.1rem;
 }
 .comment{
     display: flex;
@@ -145,4 +174,7 @@ header{
 }
 .show-total {
     visibility: visible;
+}
+.hide-item{
+    display: none;
 }
