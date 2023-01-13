@@ -5,6 +5,7 @@ let addBtn = document.querySelector(".add");
 let notesContainer = document.querySelector(".notes-container");
 let totalContainer = document.querySelector(".total-container");
 let totalMoney = document.querySelector(".total-money")
+const searchScreen = document.querySelector(".search")
 
 let editText;
 let editCost;
@@ -117,7 +118,8 @@ function setItems(){
 }
 function createList(id, textValue, costValue) {
     const element = document.createElement("div");
-        element.classList.add("new-note")
+        element.classList.add("new-note");
+        element.classList.add("filter-item")
         element.setAttribute("data-id", id);
         element.innerHTML = `<div class="comment">
                                 <p class="comment-name">${textValue}</p>
@@ -168,3 +170,22 @@ function totalCost(){
         totalMoney.textContent = `${add}`
     }
 }
+// search function
+searchScreen.addEventListener("keyup", function(){
+    let searchValue = searchScreen.value.trim();
+    const items = document.querySelectorAll(".filter-item");
+
+    items.forEach(function(item){
+        let content =  item.firstElementChild.firstElementChild.innerHTML;
+        
+        let length = searchValue.length;
+        let match = content.slice(0, length)
+
+
+        if (searchValue === match){
+            item.classList.remove("hide-item")
+        } else {
+            item.classList.add("hide-item")
+        }
+    })
+})
