@@ -194,21 +194,18 @@ const darkModeBtns = document.querySelectorAll('.dark-mode-btns');
 
 darkModeBtns.forEach(function(btn){
     btn.addEventListener("click", function(e){
-        let mainContainer = document.getElementById("main-container")
         let change = e.target;
 
         if (change.classList.contains('fa-solid')){
-
-            document.body.classList.toggle("dark")
             document.body.style.backgroundColor = "black";
             document.body.style.color = "white";
+            document.body.classList.toggle("dark");
             e.currentTarget.classList.toggle("show-btn");
         } else{
             document.body.style.backgroundColor = "#ccc";
             document.body.style.color = "black";
-            e.currentTarget.classList.toggle("show-btn");
             document.body.classList.toggle("dark");
+            e.currentTarget.classList.toggle("show-btn");
         }
-
     })
 })
