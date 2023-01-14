@@ -64,6 +64,9 @@ header{
     font-size: 1.1rem;
     border: none;
 }
+input:focus{
+    outline: none;
+}
 .add {
     width: 20%;
 }
