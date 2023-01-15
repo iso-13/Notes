@@ -209,3 +209,12 @@ darkModeBtns.forEach(function(btn){
         }
     })
 })
+// scroller
+let scrollElement = document.querySelector(".scroller");
+
+window.addEventListener("scroll", () => {
+    let scrollTop = document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    scrollElement.style.width = `${(scrollTop / height) * 100}%`
+});
