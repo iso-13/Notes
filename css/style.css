@@ -11,6 +11,15 @@ body{
     font-family: 'Arvo', serif;
     background-color: #ccc;
 }
+.scroller{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 7px;
+    background-color: #0e56a8;
+    z-index: 999;
+}
 .container{
     position: relative;
     margin: 1.5rem auto;
