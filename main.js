@@ -190,24 +190,22 @@ searchScreen.addEventListener("keyup", function(){
     })
 })
 // dark mode btn 
-const darkModeBtns = document.querySelectorAll('.dark-mode-btns');
+const darkModeBtns = document.querySelector('.dark-mode-btns');
 
-darkModeBtns.forEach(function(btn){
-    btn.addEventListener("click", function(e){
+darkModeBtns.addEventListener("click", e =>{
         let change = e.target;
 
         if (change.classList.contains('fa-solid')){
-            document.body.style.backgroundColor = "black";
-            document.body.style.color = "white";
-            document.body.classList.toggle("dark");
+            document.body.classList.toggle("dark-theme");
             e.currentTarget.classList.toggle("show-btn");
+            darkModeBtns.setAttribute("aria-label", "Switch to light mode");
+            localStorage.setItem("theme", "dark-theme");
         } else{
-            document.body.style.backgroundColor = "#ccc";
-            document.body.style.color = "black";
-            document.body.classList.toggle("dark");
+            document.body.classList.toggle("dark-theme");
             e.currentTarget.classList.toggle("show-btn");
+            darkModeBtns.setAttribute("aria-label", "Switch to dark mode");
+            localStorage.setItem("theme", "light-theme");
         }
-    })
 })
 // scroller
 let scrollElement = document.querySelector(".scroller");
@@ -218,3 +216,13 @@ window.addEventListener("scroll", () => {
 
     scrollElement.style.width = `${(scrollTop / height) * 100}%`
 });
+// load theme 
+function loadTheme (){
+    let local = localStorage.getItem("theme");
+    if (local && local == "dark-theme"){
+        document.body.classList.add("dark-theme");
+        darkModeBtns.classList.add("show-btn");
+        darkModeBtns.setAttribute("aria-label", "Switch to light mode");
+    }
+}
+loadTheme();
