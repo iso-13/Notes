@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,31 +9,34 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/all.min.css">
 </head>
+
 <body>
     <div class="scroller"></div>
     <div class="container">
-        <button class="dark-mode-btns">
-            <span class="dark-btn">
-                <i class="fa-solid fa-lightbulb"></i>
-            </span>
-            <span class="light-btn">
-                <i class="fa-regular fa-lightbulb"></i>
-            </span>
-        </button>
+        <div class="switch-mode">
+            <button class="dark-mode-btns" aria-label="Switch to dark mode">
+                <span class="dark-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </span>
+                <span class="light-btn">
+                    <i class="fa-regular fa-lightbulb"></i>
+                </span>
+            </button>
+        </div>
         <header>
             <h1><i class="fa-solid fa-clipboard-list"></i> Notes</h1>
         </header>
         <p class="alert"></p>
         <section class="new-note">
             <div class="comment">
-                <input type="text"class="note comment-name" placeholder="Write your note...">
+                <input type="text" class="note comment-name field" placeholder="Write your note...">
                 <input type="number" class="note-value money" placeholder="Cost">
             </div>
             <button class="add btn">Add Note</button>
         </section>
         <div class="search-container">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Search Notes..." class="search">
+            <input type="text" placeholder="S e a r c h N o t e s . . ." class="search">
         </div>
     </div>
     <div class="container notes-container"></div>
@@ -46,4 +50,5 @@
     </div>
     <script src="./main.js"></script>
 </body>
+
 </html>
