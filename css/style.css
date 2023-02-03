@@ -296,3 +296,21 @@ input:focus {
 .dark-theme .container {
     background-color: #312929eb;
 }
+
+@media (max-width:500px) {
+    .container{
+        max-width: 90%;
+    }
+    .search-container{
+        width: 65%;
+    }
+    .comment{
+        width: 80%;
+    }
+    .comment-name{
+        width: 75%;
+    }
+    .add{
+        font-size: 10px;
+    }
+}
