@@ -313,4 +313,7 @@ input:focus {
     .add{
         font-size: 10px;
     }
+    .total{
+        width: 80%;
+    }
 }
